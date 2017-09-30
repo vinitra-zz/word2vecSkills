@@ -29,5 +29,5 @@ for key in skill_keys:
 X_embedded = TSNE(n_components=2).fit_transform(embeddings)
 X = np.hstack((X_embedded, np.array(skills).reshape(-1, 1)))
 # with open('d3-scatterplot/embeddings.tsv','w') as f:
-np.savetxt('d3-scatterplot/embeddings.tsv', X, header='x\ty\tskill', delimiter='\t', fmt="%s")
+np.savetxt('d3-scatterplot/embeddings.tsv', X, header='x\ty\tskill', delimiter='\t', fmt="%s", comments='')
 
